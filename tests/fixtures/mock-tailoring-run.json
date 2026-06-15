@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "id": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+  "createdAt": "2026-05-19T12:00:00.000Z",
+  "status": "tailored",
+  "resume": {
+    "contact": {
+      "name": "Alex Chen",
+      "email": "alex.chen@example.com",
+      "location": "San Francisco, CA"
+    },
+    "summary": "Software engineer with 4 years of experience building web applications and internal tools using TypeScript, React, and Node.js.",
+    "skills": [
+      "TypeScript",
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Git",
+      "Jest"
+    ],
+    "experience": [
+      {
+        "company": "Northwind Labs",
+        "title": "Software Engineer",
+        "startDate": "2022-03",
+        "endDate": "Present",
+        "bullets": [
+          "Built customer-facing dashboards in React and TypeScript used by 12 internal teams.",
+          "Designed REST APIs in Node.js backed by PostgreSQL, reducing report generation time by 30%.",
+          "Collaborated with product and design on feature delivery in two-week agile sprints.",
+          "Wrote unit and integration tests with Jest, improving release confidence for the team."
+        ]
+      }
+    ],
+    "projects": [],
+    "education": [
+      {
+        "institution": "State University",
+        "degree": "B.S.",
+        "field": "Computer Science",
+        "endDate": "2020"
+      }
+    ],
+    "certifications": []
+  },
+  "jobDescription": {
+    "jobTitle": "Full Stack Engineer",
+    "company": "Acme Corp",
+    "requiredSkills": ["TypeScript", "React", "Node.js", "PostgreSQL", "REST APIs"],
+    "preferredSkills": ["Next.js", "AWS", "CI/CD", "Docker"],
+    "responsibilities": [
+      "Design and implement scalable web applications across the stack.",
+      "Collaborate with product managers and designers to deliver user-facing features."
+    ],
+    "qualifications": ["3+ years of professional software development experience."],
+    "tools": ["Git", "Jest"],
+    "keywords": ["full stack", "agile", "scalable"],
+    "seniorityLevel": "Mid-level",
+    "domainSignals": ["B2B SaaS"]
+  },
+  "originalMatch": {
+    "overallScore": 62,
+    "skillCoverageScore": 70,
+    "responsibilityAlignmentScore": 58,
+    "keywordScore": 55,
+    "seniorityScore": 65,
+    "criticalMissingRequirements": ["AWS", "Docker"],
+    "explanation": "Strong overlap on core stack (TypeScript, React, Node, PostgreSQL). Missing preferred cloud and container tooling; responsibility language could map more directly to JD phrasing."
+  },
+  "tailoredMatch": {
+    "overallScore": 78,
+    "skillCoverageScore": 82,
+    "responsibilityAlignmentScore": 76,
+    "keywordScore": 74,
+    "seniorityScore": 65,
+    "criticalMissingRequirements": ["AWS", "Docker"],
+    "explanation": "Tailored bullets emphasize full-stack delivery, agile collaboration, and scalable APIs without adding unverified cloud experience. Preferred skills AWS/Docker remain gaps to address honestly."
+  },
+  "gapAnalysis": {
+    "gaps": [
+      {
+        "name": "AWS",
+        "importance": "medium",
+        "jdEvidence": "Preferred: experience with AWS",
+        "resumeEvidence": "Not mentioned in resume or bullets",
+        "suggestedAction": "Add to skills only if you have used AWS; otherwise prepare to discuss learning plan in interview.",
+        "canSafelyAdd": false
+      },
+      {
+        "name": "Docker",
+        "importance": "low",
+        "jdEvidence": "Preferred: Docker",
+        "resumeEvidence": "Not mentioned",
+        "suggestedAction": "Leave out if not true; mention familiarity if you have used containers in side projects.",
+        "canSafelyAdd": false
+      }
+    ]
+  },
+  "tailoredResume": {
+    "tailoredSummary": "Full stack software engineer with 4 years delivering TypeScript/React front ends and Node.js REST APIs on PostgreSQL, focused on scalable, customer-facing product features in agile teams.",
+    "tailoredSkills": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Jest",
+      "Git",
+      "Agile delivery"
+    ],
+    "tailoredExperience": [
+      {
+        "company": "Northwind Labs",
+        "title": "Software Engineer",
+        "bullets": [
+          {
+            "original": "Built customer-facing dashboards in React and TypeScript used by 12 internal teams.",
+            "tailored": "Delivered scalable, customer-facing React and TypeScript dashboards used by 12 cross-functional teams.",
+            "changeReason": "Aligned with JD emphasis on user-facing features and scalable applications.",
+            "keywordsAddressed": ["React", "TypeScript", "scalable"],
+            "confidence": "high"
+          },
+          {
+            "original": "Designed REST APIs in Node.js backed by PostgreSQL, reducing report generation time by 30%.",
+            "tailored": "Designed and implemented Node.js REST APIs on PostgreSQL, improving report generation performance by 30%.",
+            "changeReason": "Mirrors JD language for API design and performance without changing the metric.",
+            "keywordsAddressed": ["REST APIs", "Node.js", "PostgreSQL", "performance"],
+            "confidence": "high"
+          },
+          {
+            "original": "Collaborated with product and design on feature delivery in two-week agile sprints.",
+            "tailored": "Partnered with product managers and designers to ship features in two-week agile sprints.",
+            "changeReason": "Maps collaboration wording to JD responsibilities.",
+            "keywordsAddressed": ["agile", "product"],
+            "confidence": "high"
+          },
+          {
+            "original": "Wrote unit and integration tests with Jest, improving release confidence for the team.",
+            "tailored": "Wrote unit and integration tests with Jest and participated in code reviews to improve release quality.",
+            "changeReason": "Connects testing practice to JD code quality expectations.",
+            "keywordsAddressed": ["Jest", "code review"],
+            "confidence": "medium"
+          }
+        ]
+      }
+    ]
+  },
+  "guardrailWarnings": []
+}

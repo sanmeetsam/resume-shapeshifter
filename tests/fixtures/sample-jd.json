@@ -1,0 +1,38 @@
+{
+  "jobTitle": "Full Stack Engineer",
+  "company": "Acme Corp",
+  "requiredSkills": [
+    "TypeScript",
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "REST APIs"
+  ],
+  "preferredSkills": [
+    "Next.js",
+    "AWS",
+    "CI/CD",
+    "Docker"
+  ],
+  "responsibilities": [
+    "Design and implement scalable web applications across the stack.",
+    "Collaborate with product managers and designers to deliver user-facing features.",
+    "Write clean, tested code and participate in code reviews.",
+    "Improve application performance and reliability in production."
+  ],
+  "qualifications": [
+    "3+ years of professional software development experience.",
+    "Strong fundamentals in data structures, algorithms, and system design.",
+    "Experience with relational databases and API design."
+  ],
+  "tools": ["Git", "Jest", "GitHub Actions"],
+  "keywords": [
+    "full stack",
+    "agile",
+    "code review",
+    "performance",
+    "scalable"
+  ],
+  "seniorityLevel": "Mid-level",
+  "domainSignals": ["B2B SaaS", "customer-facing product"]
+}

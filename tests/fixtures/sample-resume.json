@@ -1,0 +1,65 @@
+{
+  "contact": {
+    "name": "Alex Chen",
+    "email": "alex.chen@example.com",
+    "phone": "+1 (555) 010-2030",
+    "location": "San Francisco, CA",
+    "linkedin": "https://linkedin.com/in/alexchen",
+    "website": "https://alexchen.dev"
+  },
+  "summary": "Software engineer with 4 years of experience building web applications and internal tools using TypeScript, React, and Node.js.",
+  "skills": [
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "PostgreSQL",
+    "REST APIs",
+    "Git",
+    "Jest"
+  ],
+  "experience": [
+    {
+      "company": "Northwind Labs",
+      "title": "Software Engineer",
+      "startDate": "2022-03",
+      "endDate": "Present",
+      "bullets": [
+        "Built customer-facing dashboards in React and TypeScript used by 12 internal teams.",
+        "Designed REST APIs in Node.js backed by PostgreSQL, reducing report generation time by 30%.",
+        "Collaborated with product and design on feature delivery in two-week agile sprints.",
+        "Wrote unit and integration tests with Jest, improving release confidence for the team."
+      ]
+    },
+    {
+      "company": "Brightline Systems",
+      "title": "Junior Developer",
+      "startDate": "2020-06",
+      "endDate": "2022-02",
+      "bullets": [
+        "Maintained legacy JavaScript modules and migrated components to React.",
+        "Fixed production bugs and participated in on-call rotation for critical services."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Open Budget Tracker",
+      "description": "Personal finance web app",
+      "bullets": [
+        "Implemented expense categorization and CSV export with Next.js and SQLite."
+      ],
+      "technologies": ["Next.js", "TypeScript", "SQLite"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "State University",
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "endDate": "2020"
+    }
+  ],
+  "certifications": []
+}
