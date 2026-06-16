@@ -56,14 +56,12 @@ function detectLayoutWarnings(text: string): string[] {
 }
 
 async function extractPdfText(buffer: Buffer): Promise<string> {
-  const { PDFParse } = await import("pdf-parse");
-  const parser = new PDFParse({ data: buffer });
-  try {
-    const result = await parser.getText();
-    return result.text ?? "";
-  } finally {
-    await parser.destroy();
-  }
+  const pdfParse = await import("pdf-parse");
+  // Disable worker to avoid module resolution issues in serverless
+  const result = await (pdfParse as any)(buffer, {
+    worker: false,
+  });
+  return result.text ?? "";
 }
 
 async function extractDocxText(buffer: Buffer): Promise<string> {
