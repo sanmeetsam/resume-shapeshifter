@@ -56,12 +56,16 @@ function detectLayoutWarnings(text: string): string[] {
 }
 
 async function extractPdfText(buffer: Buffer): Promise<string> {
-  const pdfParse = await import("pdf-parse");
-  // Disable worker to avoid module resolution issues in serverless
-  const result = await (pdfParse as any)(buffer, {
-    worker: false,
-  });
-  return result.text ?? "";
+  try {
+    const pdfParse = await import("pdf-parse");
+    // Try both default and named import
+    const parse = (pdfParse as any).default || pdfParse;
+    const result = await parse(buffer);
+    return result.text ?? "";
+  } catch (error) {
+    console.error("PDF parsing error:", error);
+    throw new Error("Failed to parse PDF file. Please try uploading a different file or paste the text directly.");
+  }
 }
 
 async function extractDocxText(buffer: Buffer): Promise<string> {
