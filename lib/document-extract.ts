@@ -57,11 +57,19 @@ function detectLayoutWarnings(text: string): string[] {
 
 async function extractPdfText(buffer: Buffer): Promise<string> {
   try {
-    const pdfParse = await import("pdf-parse");
-    // Try both default and named import
-    const parse = (pdfParse as any).default || pdfParse;
-    const result = await parse(buffer);
-    return result.text ?? "";
+    // Use pdfjs-dist for better serverless compatibility
+    const pdfjsLib = await import("pdfjs-dist");
+    const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
+    
+    let fullText = "";
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const textContent = await page.getTextContent();
+      const pageText = textContent.items.map((item: any) => item.str).join(" ");
+      fullText += pageText + "\n";
+    }
+    
+    return fullText.trim();
   } catch (error) {
     console.error("PDF parsing error:", error);
     throw new Error("Failed to parse PDF file. Please try uploading a different file or paste the text directly.");
