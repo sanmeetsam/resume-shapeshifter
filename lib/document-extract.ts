@@ -95,16 +95,17 @@ export async function extractResumeFromBuffer(
 
   if (!isAllowedResumeMime(mimeType)) {
     throw new Error(
-      "Unsupported file type. Upload PDF or DOCX only."
+      "Unsupported file type. Upload DOCX only (PDF temporarily disabled in serverless)."
     );
   }
 
   let text = "";
-  if (mimeType === "application/pdf") {
-    text = await extractPdfText(buffer);
-  } else {
+  // PDF temporarily disabled in serverless
+  // if (mimeType === "application/pdf") {
+  //   text = await extractPdfText(buffer);
+  // } else {
     text = await extractDocxText(buffer);
-  }
+  // }
 
   const normalized = text.replace(/\r\n/g, "\n").trim();
   if (!normalized) {
