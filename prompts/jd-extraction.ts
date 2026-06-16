@@ -16,7 +16,7 @@ export async function extractJobDescription(
 
 Return JSON matching this shape:
 {
-  "jobTitle": string (required),
+  "jobTitle": string (optional, default to "Unknown Position" if not found),
   "company": string (optional),
   "requiredSkills": string[],
   "preferredSkills": string[],
@@ -24,9 +24,16 @@ Return JSON matching this shape:
   "qualifications": string[],
   "tools": string[],
   "keywords": string[],
-  "seniorityLevel": string,
+  "seniorityLevel": string (optional),
   "domainSignals": string[]
 }
+
+Guidelines:
+- If a field is not clearly present in the JD, return an empty array or omit it
+- Focus on extracting actual requirements rather than marketing language
+- Split complex requirements into individual items
+- Include both technical and soft skills in the skills arrays
+- If the job title is unclear, use "Unknown Position"
 
 Job description:
 """
