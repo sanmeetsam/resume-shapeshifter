@@ -1,7 +1,8 @@
 const DEFAULT_MAX_MB = 5;
 
 export const ALLOWED_RESUME_MIME_TYPES = [
-  "application/pdf",
+  // Temporarily disabled PDF upload due to serverless compatibility issues
+  // "application/pdf",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 ] as const;
 
